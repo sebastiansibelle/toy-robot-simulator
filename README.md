@@ -1,5 +1,11 @@
 # Toy Robot Simulator
 
+## Installation
+
+Install gem dependencies with [Bundler](http://bundler.io/ "Bundler"):
+
+  bundle install
+
 ## Description
 
 - The application is a simulation of a toy robot moving on a square tabletop, of dimensions 5 units x 5 units.
