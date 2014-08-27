@@ -3,6 +3,8 @@ step "a table of 5 units high by 5 units wide" do
 end
 
 step "a robot placed at 0,0 facing north" do
-  @robot = Robot.new(@board)
-  @robot.place(0, 0, :north)
+  @robot = Robot.new(@table)
+  @position = Position.new(0,0)
+  @orientation = Orientation::NORTH
+  @robot.place_at(position, orientation)
 end
