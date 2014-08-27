@@ -2,9 +2,17 @@
 
 ## Installation
 
+This application has some gem dependencies whicha re used for automated testing. Gem dependencies can be found in the Gemfile. 
+
 Install gem dependencies with [Bundler](http://bundler.io/ "Bundler"):
 
   bundle install
+
+## Testing
+
+Run the test suite using rspec:
+
+  rspec
 
 ## Description
 
