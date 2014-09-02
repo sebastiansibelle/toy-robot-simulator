@@ -9,6 +9,11 @@ Feature: Simulating movement of the robot
     Then the robot should be at 0,1 facing north
 
   Scenario: Preventing robot from falling
-    Given a robot placed at 5,5 facing north
+    Given a robot placed at 4,4 facing north
     When the robot moves
-    Then the robot should be at 5,5 facing north
+    Then the robot should be at 4,4 facing north
+
+  Scenario: Placing a robot off the table
+    Given a robot
+    When a robot placed at 4,5 facing north
+    Then the robot should not be placed

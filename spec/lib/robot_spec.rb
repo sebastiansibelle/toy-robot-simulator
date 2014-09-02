@@ -33,13 +33,13 @@ describe Robot do
       it "does not change the robots position" do
         table = Table.new(5,5)
         robot = Robot.new(table)
-        position = Position.new(5,5)
+        position = Position.new(4,4)
         orientation = Orientation::NORTH
         placement = Placement.new(table, position, orientation)
         robot.place(placement)
         robot.move
 
-        expect(robot.placement.position).to eq(Position.new(5,5))
+        expect(robot.placement.position).to eq(Position.new(4,4))
         expect(robot.placement.orientation).to eq(Orientation::NORTH)
       end
     end
