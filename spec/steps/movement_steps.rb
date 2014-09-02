@@ -6,5 +6,5 @@ step "a robot placed at 0,0 facing north" do
   @robot = Robot.new(@table)
   position = Position.new(0,0)
   orientation = Orientation::NORTH
-  @robot.place_at(position, orientation)
+  @robot.place(position, orientation)
 end
