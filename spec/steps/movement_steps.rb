@@ -8,3 +8,7 @@ step "a robot placed at 0,0 facing north" do
   orientation = Orientation::NORTH
   @robot.place(position, orientation)
 end
+
+step "the robot moves" do
+  @robot.move
+end
