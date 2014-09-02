@@ -6,7 +6,8 @@ step "a robot placed at :x,:y facing north" do |x, y|
   @robot = Robot.new(@table)
   position = Position.new(x.to_i, y.to_i)
   orientation = Orientation::NORTH
-  @robot.place(position, orientation)
+  placement = Placement.new(@table, position, orientation)
+  @robot.place(placement)
 end
 
 step "the robot moves" do
@@ -14,6 +15,6 @@ step "the robot moves" do
 end
 
 step "the robot should be at :x,:y facing north" do |x, y|
-  expect(@robot.position).to eq(Position.new(x.to_i, y.to_i))
-  expect(@robot.orientation).to eq(Orientation::NORTH)
+  expect(@robot.placement.position).to eq(Position.new(x.to_i, y.to_i))
+  expect(@robot.placement.orientation).to eq(Orientation::NORTH)
 end
