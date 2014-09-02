@@ -2,7 +2,7 @@ step "a table of 5 units high by 5 units wide" do
   @table = Table.new(5, 5)
 end
 
-step "a robot placed at 0,0 facing north" do
+step "a robot placed at 0, 0 facing north" do
   @robot = Robot.new(@table)
   position = Position.new(0,0)
   orientation = Orientation::NORTH
@@ -11,4 +11,9 @@ end
 
 step "the robot moves" do
   @robot.move
+end
+
+step "the robot should be at 0,1 facing north" do
+  expect(@robot.position).to eq(Position.new(0,1))
+  expect(@robot.orientation).to eq(Orientation::NORTH)
 end
