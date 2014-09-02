@@ -1,10 +1,11 @@
 # spec/acceptance/process_commands.feature
 Feature: Processing commands for the robot
   Background:
-    Given a table of 5 units wide by 5 units high
+    Given we initialized the application
+    And a table of 5 units wide by 5 units high
 
   Scenario: Moving
-  When the command "PLACE 0,1,NORTH" is issued
-  And the command "MOVE" is issued
-  And the command "REPORT" is issued
-  Then I should see "0,2,NORTH"
+    When we send the command "PLACE 0,1,NORTH"
+    And we send the command "MOVE"
+    And we send the command "REPORT"
+    Then we should see "0,2,NORTH"
