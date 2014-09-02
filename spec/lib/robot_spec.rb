@@ -10,7 +10,6 @@ describe Robot do
       placement = Placement.new(table, position, orientation)
       robot.place(placement)
 
-      expect(robot.placement.table).to eq(Table.new(5,5))
       expect(robot.placement.position).to eq(Position.new(2,3))
       expect(robot.placement.orientation).to eq(Orientation::NORTH)
     end
@@ -26,7 +25,6 @@ describe Robot do
       robot.place(placement)
       robot.move 
 
-      expect(robot.placement.table).to eq(Table.new(5,5))
       expect(robot.placement.position).to eq(Position.new(2,4))
       expect(robot.placement.orientation).to eq(Orientation::NORTH)
     end
@@ -41,7 +39,6 @@ describe Robot do
         robot.place(placement)
         robot.move
 
-      expect(robot.placement.table).to eq(Table.new(5,5))
       expect(robot.placement.position).to eq(Position.new(5,5))
       expect(robot.placement.orientation).to eq(Orientation::NORTH)
       end
