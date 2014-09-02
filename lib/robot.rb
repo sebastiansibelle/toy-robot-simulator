@@ -1,3 +1,4 @@
+# lib/robot.rb
 class Robot
   attr_reader :placement
 

@@ -2,7 +2,7 @@
 
 ## Installation
 
-This application has some gem dependencies whicha re used for automated testing. Gem dependencies can be found in the Gemfile. 
+This application has some gem dependencies which are used for automated testing. Gem dependencies can be found in the Gemfile. 
 
 Install gem dependencies with [Bundler](http://bundler.io/ "Bundler"):
 

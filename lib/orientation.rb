@@ -1,3 +1,5 @@
+# lib/orientation.rb
+
 class Orientation
   NORTH = :north
   SOUTH = :south

@@ -1,3 +1,4 @@
+# lib/placement.rb
 require "table"
 require "position"
 require "orientation"
