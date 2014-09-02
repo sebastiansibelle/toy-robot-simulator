@@ -23,7 +23,7 @@ describe Robot do
       robot.place(position, orientation)
       robot.move 
 
-      expect(robot.position).to eq(Position(2,4))
+      expect(robot.position).to eq(Position.new(2,4))
       expect(robot.orientation).to eq(Orientation::NORTH)
     end
   end
