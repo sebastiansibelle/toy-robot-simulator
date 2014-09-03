@@ -9,6 +9,14 @@ class Placement < Struct.new(:table, :position, :orientation)
     position.y < table.height
   end
 
+  def left
+    Placement.new(table, position, Orientation.left(orientation))
+  end
+
+  def right
+    Placement.new(table, position, Orientation.right(orientation))
+  end
+
   def report
     position.to_s + "," + orientation.to_s.upcase
   end
