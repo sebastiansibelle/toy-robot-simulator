@@ -1,5 +1,3 @@
-require_relative 'lib/robot'
-require_relative 'lib/table'
 require_relative 'lib/application'
 
 STDERR.puts "Welcome to the Toy Robot Simulator!"
