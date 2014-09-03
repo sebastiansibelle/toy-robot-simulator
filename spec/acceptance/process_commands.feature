@@ -17,7 +17,6 @@ Feature: Processing commands for the robot
     And we run the simulator
     Then we should see "0,0,WEST"
 
-
   Scenario: Moving and turning
     When we send the command "PLACE 1,2,EAST"
     And we send the command "MOVE"
@@ -27,3 +26,16 @@ Feature: Processing commands for the robot
     And we send the command "REPORT"
     And we run the simulator
     Then we should see "3,3,NORTH"
+
+  Scenario: Never placed on the board
+    When we send the command "MOVE"
+    And we send the command "LEFT"
+    When we send the command "MOVE"
+    And we send the command "REPORT"
+    And we run the simulator
+    Then we should see "unplaced"
+
+  Scenario: Placed off the table
+    When we send the command "PLACE 6,6,EAST"
+    And we run the simulator
+    Then we should see "unplaced"
