@@ -1,15 +1,15 @@
-step "we initialized the application" do
+step "we initialized the simulator" do
   @stdin = FakeIO.new
   @stdout = StringIO.new
-  @application = Application.new(@stdin, @stdout)
+  @simulator = Simulator.new(@stdin, @stdout)
 end
 
 step "we send the command :command" do |command|
   @stdin.puts command
 end
 
-step "we run the application" do
-  @application.run
+step "we run the simulator" do
+  @simulator.run
 end
 
 step "we should see :report" do |report|

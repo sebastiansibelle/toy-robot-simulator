@@ -1,8 +1,8 @@
-# lib/application.rb
+# lib/simulator.rb
 require "./lib/robot"
 require "./lib/placement"
 
-class Application
+class Simulator
   TABLE_X = 5
   TABLE_Y = 5
 
@@ -18,7 +18,7 @@ class Application
   def run
     while token = @stdin.gets
       # STDOUT.puts "Input: " + token
-      command = Application.parse(token)
+      command = Simulator.parse(token)
       case command[:type]
       when :place
         arguments = command[:arguments]
