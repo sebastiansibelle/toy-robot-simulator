@@ -4,6 +4,15 @@ require "application"
 describe "Application" do
   describe "run" do 
     it "recieves and executes commands from stdin" do
+      stdout = double(:stdout)
+      stdin = FakeIO.new
+      stdin.puts "MOVE"
+
+      application = Application.new(stdin, stdout)
+
+      expect do
+        application.run
+      end.to change { stdin.inputs }.to([])
     end
   end
 

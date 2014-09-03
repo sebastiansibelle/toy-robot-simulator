@@ -4,6 +4,10 @@ step "we initialized the application" do
   @application = Application.new(@stdin, @stdout)
 end
 
+step "we run the application" do
+  @application.run
+end
+
 step "we send the command :command" do |command|
   @stdin.puts command
 end

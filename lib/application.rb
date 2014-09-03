@@ -15,6 +15,24 @@ class Application
     @stdout = stdout
   end
 
+  def run
+    while token = @stdin.gets
+      command = Application.parse(token)
+      case command[:type]
+      when :place
+        @robot.place(placement)
+      when :left
+        @robot.left
+      when :right
+        @robot.right
+      when :move 
+        @robot.moveg
+      when :report
+        @robot.report(@stdout)
+      end
+    end
+  end
+
   def self.parse(token)
     command, arguments = token.split(" ")
     arguments = String(arguments).split(",")
