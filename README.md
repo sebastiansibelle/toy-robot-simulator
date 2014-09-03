@@ -24,7 +24,7 @@ Run the test suite using rspec:
 
 ## Version
 
-1.0.0 
+1.0.1
 
 ## Problem Description
 
