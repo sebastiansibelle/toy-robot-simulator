@@ -24,9 +24,8 @@ Run the test suite using rspec:
 
 ## Version
 
-1.0.0 
+1.0.1
 
-g
 ## Problem Description
 
 - The application is a simulation of a toy robot moving on a square tabletop, of dimensions 5 units x 5 units.

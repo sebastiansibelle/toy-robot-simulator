@@ -1,6 +1,6 @@
 # lib/robot.rb
 class Robot
-  attr_reader :placement
+  attr_reader :placement, :placed
 
   def initialize(table)
     @table = table
@@ -42,7 +42,7 @@ class Robot
   end
 
   def report(output)
-    output << @placement.to_s
+    output << @placement.to_s + "\n"
   end
 
   private

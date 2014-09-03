@@ -5,7 +5,7 @@ require "simulator"
 describe "Simulator" do
   describe "run" do 
     it "recieves and executes commands from stdin" do
-      stdout = double(:stdout)
+      stdout = double("stdout", :<< => "unplaced")
       stdin = FakeIO.new
       stdin.puts "MOVE"
 
@@ -14,6 +14,7 @@ describe "Simulator" do
       expect do
         simulator.run
       end.to change { stdin.inputs }.to([])
+
     end
   end
 
