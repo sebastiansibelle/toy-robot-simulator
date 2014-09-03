@@ -19,12 +19,22 @@ class Simulator
     while token = @stdin.gets
       # STDOUT.puts "Input: " + token
       command = Simulator.parse(token)
+      unless(command[:type] == :place)
+        if(@robot.placed == false)
+          @stdout << "unplaced\n"
+          next
+        end
+      end
+
       case command[:type]
       when :place
         arguments = command[:arguments]
         position = Position.new(arguments[0].to_i, arguments[1].to_i)
         placement = Placement.new(@table, position, Orientation.from_name(arguments[2]))
         @robot.place(placement)
+        if(@robot.placed == false)
+          @stdout << "unplaced\n"
+        end
       when :left
         @robot.left
       when :right
