@@ -8,19 +8,19 @@ This application has some gem dependencies which are used for automated testing.
 
 Install gem dependencies with [Bundler](http://bundler.io/ "Bundler"):
 
-  bundle install
+    bundle install
 
 ## Running
 
 You can run the program on command line using:
 
-ruby main.rb
+    gruby main.rb
 
 ## Testing
 
 Run the test suite using rspec:
 
-  rspec
+    rspec
 
 ## Problem Description
 
