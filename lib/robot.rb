@@ -34,11 +34,11 @@ class Robot
   end
 
   def right
-    @placement.right
+    set_placement(@placement.right)
   end
 
   def left
-    @placement.left
+    set_placement(@placement.left)
   end
 
   def report(output)
