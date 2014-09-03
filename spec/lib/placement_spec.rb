@@ -1,6 +1,8 @@
+# ./spec/lib/placement_spec.rb
 require "placement"
 
 describe Placement do
+  # Be exhaustive here since being on the table is rather important.
   describe "is_valid" do
     let(:table) { Table.new(2, 2) }
     subject(:placement) { Placement.new(table, position, Orientation::NORTH) }
@@ -73,6 +75,35 @@ describe Placement do
       it "is false" do
         expect(placement.is_valid).to be false
       end
+    end
+  end
+
+  describe "#left" do
+    it "returns a placement rotated 90 degrees in the left direction" do
+      table = Table.new(1, 1)
+      position = Position.new(0, 0)
+      orientation = Orientation::NORTH
+      placement = Placement.new(table, position, orientation)
+
+      west_placement = Placement.new(table, position, Orientation::WEST)
+      expect do
+        expect(placement.left).to eq(west_placement)
+      end.to_not change { placement }
+    end
+  end
+
+  
+  describe "#right" do
+    it "returns a placement rotated 90 degrees in the right direction" do
+      table = Table.new(1, 1)
+      position = Position.new(0, 0)
+      orientation = Orientation::NORTH
+      placement = Placement.new(table, position, orientation)
+
+      east_placement = Placement.new(table, position, Orientation::EAST)
+      expect do
+        expect(placement.right).to eq(east_placement)
+      end.to_not change { placement }
     end
   end
 end
