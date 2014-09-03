@@ -91,7 +91,6 @@ describe Placement do
       end.to_not change { placement }
     end
   end
-
   
   describe "#right" do
     it "returns a placement rotated 90 degrees in the right direction" do
@@ -104,6 +103,18 @@ describe Placement do
       expect do
         expect(placement.right).to eq(east_placement)
       end.to_not change { placement }
+    end
+  end
+
+   describe "to_s" do
+    it "converts a placement to a string" do
+      position = Position.new(2,3)
+      table = Table.new(1,1)
+      placement = Placement.new(table, position, Orientation::NORTH)
+
+      string = placement.to_s 
+
+      expect(string).to eq("2,3,NORTH")
     end
   end
 end

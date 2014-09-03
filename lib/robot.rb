@@ -42,7 +42,7 @@ class Robot
   end
 
   def report(output)
-    output << @placement.report
+    output << @placement.to_s
   end
 
   private
