@@ -1,5 +1,7 @@
 # Toy Robot Simulator
 
+The application is a simulation of a toy robot moving on a square tabletop.
+
 ## Installation
 
 This application has some gem dependencies which are used for automated testing. Gem dependencies can be found in the Gemfile. 
@@ -8,20 +10,26 @@ Install gem dependencies with [Bundler](http://bundler.io/ "Bundler"):
 
   bundle install
 
+## Running
+
+You can run the program on command line using:
+
+ruby main.rb
+
 ## Testing
 
 Run the test suite using rspec:
 
   rspec
 
-## Description
+## Problem Description
 
 - The application is a simulation of a toy robot moving on a square tabletop, of dimensions 5 units x 5 units.
 - There are no other obstructions on the table surface.
 - The robot is free to roam around the surface of the table, but must be prevented from falling to destruction.
 - Any movement that would result in the robot falling from the table must be prevented, however further valid movement commands must still be allowed.
 
-## Task
+### Task
 
 Create an application that can read in commands of the following form:
 
@@ -31,7 +39,7 @@ Create an application that can read in commands of the following form:
 - RIGHT
 - REPORT
 
-### Requirements
+#### Requirements
 
 - PLACE will put the toy robot on the table in position X,Y and facing NORTH, SOUTH, EAST or WEST. 
 - The origin (0,0) can be considered to be the SOUTH WEST most corner.
@@ -44,7 +52,7 @@ Create an application that can read in commands of the following form:
 - Input can be from a file, or from standard input, as the developer chooses.
 - Provide test data to exercise the application.
 
-## Constraints
+#### Constraints
 
 - The toy robot must not fall off the table during movement. This also includes the initial placement of the toy robot. 
 - Any move that would cause the robot to fall must be ignored.
@@ -72,7 +80,7 @@ Create an application that can read in commands of the following form:
   - REPORT
   - Output: 3,3,NORTH
 
-## Deliverables
+#### Deliverables
 
 - The source files, the test data and any test code.
 - It is not required to provide any graphical output showing the movement of the toy robot. 
