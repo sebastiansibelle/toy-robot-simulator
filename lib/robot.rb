@@ -37,4 +37,8 @@ class Robot
       end
     end
   end
+
+  def report(output)
+    output << @placement.report
+  end
 end

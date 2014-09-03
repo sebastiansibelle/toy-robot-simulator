@@ -1,6 +1,8 @@
 # lib/application.rb
 # Main application class runs from here.
-# 
+require "./lib/robot"
+require "./lib/placement"
+
 class Application
 
   TABLE_X = 5
@@ -17,16 +19,21 @@ class Application
 
   def run
     while token = @stdin.gets
+      STDERR.puts token
       command = Application.parse(token)
       case command[:type]
       when :place
+        arguments = command[:arguments]
+        position = Position.new(arguments[0].to_i, arguments[1].to_i)
+        placement = Placement.new(@table, position, Orientation.from_name(arguments[2]))
+        STDERR.puts placement.inspect
         @robot.place(placement)
       when :left
         @robot.left
       when :right
         @robot.right
-      when :move 
-        @robot.moveg
+      when :move
+        @robot.move
       when :report
         @robot.report(@stdout)
       end
