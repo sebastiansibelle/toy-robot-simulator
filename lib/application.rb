@@ -4,7 +4,6 @@ require "./lib/robot"
 require "./lib/placement"
 
 class Application
-
   TABLE_X = 5
   TABLE_Y = 5
 
