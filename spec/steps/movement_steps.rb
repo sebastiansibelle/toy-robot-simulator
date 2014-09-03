@@ -27,9 +27,9 @@ step "the robot turns left" do
 end
 
 
-step "the robot should be at :x,:y facing north" do |x, y|
+step "the robot should be at :x,:y facing :orientation" do |x, y, orientation|
   expect(@robot.placement.position).to eq(Position.new(x.to_i, y.to_i))
-  expect(@robot.placement.orientation).to eq(Orientation::NORTH)
+  expect(@robot.placement.orientation).to eq(Orientation.from_name(orientation))
 end
 
 step "the robot should not be placed" do
