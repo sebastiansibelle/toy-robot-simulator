@@ -8,10 +8,7 @@ class Robot
   end
 
   def place(placement)
-    if(placement.is_valid)
-      @placement = placement
-      @placed = true
-    end
+    set_placement(placement)
   end
 
   def move
@@ -32,13 +29,28 @@ class Robot
 
       new_placement = Placement.new(@table, new_position, orientation)
 
-      if new_placement.is_valid
-        @placement = new_placement
-      end
+      set_placement(new_placement)
     end
+  end
+
+  def right
+    @placement.right
+  end
+
+  def left
+    @placement.left
   end
 
   def report(output)
     output << @placement.report
+  end
+
+  private
+
+  def set_placement(placement)
+    if(placement.is_valid)
+      @placement = placement
+      @placed = true
+    end
   end
 end
