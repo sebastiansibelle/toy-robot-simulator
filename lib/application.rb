@@ -19,14 +19,13 @@ class Application
 
   def run
     while token = @stdin.gets
-      STDERR.puts token
+      STDOUT.puts "Input: " + token
       command = Application.parse(token)
       case command[:type]
       when :place
         arguments = command[:arguments]
         position = Position.new(arguments[0].to_i, arguments[1].to_i)
         placement = Placement.new(@table, position, Orientation.from_name(arguments[2]))
-        STDERR.puts placement.inspect
         @robot.place(placement)
       when :left
         @robot.left
