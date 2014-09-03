@@ -18,6 +18,15 @@ step "the robot moves" do
   @robot.move
 end
 
+step "the robot turns right" do
+  @robot.right
+end
+
+step "the robot turns left" do
+  @robot.left
+end
+
+
 step "the robot should be at :x,:y facing north" do |x, y|
   expect(@robot.placement.position).to eq(Position.new(x.to_i, y.to_i))
   expect(@robot.placement.orientation).to eq(Orientation::NORTH)
