@@ -10,11 +10,11 @@ Install gem dependencies with [Bundler](http://bundler.io/ "Bundler"):
 
     bundle install
 
-## Running
+## Running the simulator
 
 You can run the program on command line using:
 
-    gruby main.rb
+    ruby main.rb
 
 ## Testing
 
