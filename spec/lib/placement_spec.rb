@@ -1,4 +1,4 @@
-# ./spec/lib/placement_spec.rb
+# spec/lib/placement_spec.rb
 require "placement"
 
 describe Placement do

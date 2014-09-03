@@ -1,3 +1,4 @@
+# spec/lib/robot_spec.rb
 require "robot"
 
 describe Robot do

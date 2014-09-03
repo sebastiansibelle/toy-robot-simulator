@@ -1,3 +1,4 @@
+# spec/lib/application_spec.rb
 require_relative "../support/fakeio"
 require "application"
 

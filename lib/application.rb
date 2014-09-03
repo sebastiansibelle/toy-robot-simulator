@@ -1,5 +1,4 @@
 # lib/application.rb
-# Main application class runs from here.
 require "./lib/robot"
 require "./lib/placement"
 

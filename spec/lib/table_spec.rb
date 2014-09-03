@@ -1,3 +1,4 @@
+# spec/lib/table_spec.rb
 require "table"
 
 describe Table do

@@ -1,3 +1,4 @@
+# spec/lib/position_spec.rb
 require "position"
 
 describe Position do
