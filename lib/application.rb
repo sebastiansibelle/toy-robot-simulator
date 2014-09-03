@@ -18,7 +18,7 @@ class Application
 
   def run
     while token = @stdin.gets
-      STDOUT.puts "Input: " + token
+      # STDOUT.puts "Input: " + token
       command = Application.parse(token)
       case command[:type]
       when :place
