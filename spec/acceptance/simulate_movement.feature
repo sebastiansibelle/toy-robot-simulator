@@ -17,3 +17,13 @@ Feature: Simulating movement of the robot
     Given a robot
     When a robot placed at 4,5 facing north
     Then the robot should not be placed
+
+  Scenario: Turning right
+    Given a robot placed at 0,0 facing north
+    When the robot turns right
+    Then the robot should be at 0,0 facing east
+
+  Scenario: Turning left
+    Given a robot placed at 0,0 facing north
+    When the robot turns left
+    Then the robot should be at 0,0 facing west
